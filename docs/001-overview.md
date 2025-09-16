@@ -16,7 +16,7 @@ The reason I chose a Food delivery app is because:
 
 ## Products Overview
 
-Let's look at what we’ll require at minimum to build this product and have it be useful as a product. We’ll go through the process that I use to go through and quote for a new project when a client reaches out to me. We’ll work our way from the app through the entire system and then make a list of each of those items. We’ll start with the most important. Each of the descriptions will have a boldd word which indicates something else that needs to be built.
+Let's look at what we’ll require at minimum to build this product and have it be useful as a product. We’ll go through the process that I use to go through and quote for a new project when a client reaches out to me. We’ll work our way from the app through the entire system and then make a list of each of those items. We’ll start with the most important. Each of the descriptions will have a bold word which indicates something else that needs to be built.
 
 ### Customer Mobile Application
 
@@ -28,13 +28,13 @@ So now we have the information that will be shown in the app through the Restaur
 
 ### Restaurant Application
 
-This application goes into the Restaurant that’s signed up to our service so they can manage it from there. This application will be connected to our backend to manage orders for the specific restaurant. They will be able to select an order and indicate to us how long it’ll take to complete, then they’ll be able to mark it ready for when the driver can pick it up. So this application will be solely for the restaurant to give updates to the customer that ordered the meal. Did I just say driver? Well how will they know what’s happening. That’s where the **Driver app** comes in.
+This application goes into the Restaurant that’s signed up to our service so they can manage it from there. This application will be connected to our backend to manage orders for the specific restaurant. They will be able to select an order and indicate to us how long it’ll take to complete, then they’ll be able to mark it ready for when the driver can pick it up. So this application will be solely for the restaurant to give updates to the customer that ordered the meal. Did I just say driver? Well, how will they know what’s happening?. That’s where the **Driver app** comes in.
 
 ### Driver Application
 
-This application is specifically designed for the drivers. It’s to notify them if they have an order to pick up. They will get a firebase notification which will tell them there’s an order up for grabs in their area. They can then accept the order which will be assigned to them and they will get the locations of where to pick up and where to drop off. The driver app will complete the order process and mark the order as delivered and completed. What about the drivers tip?
+This application is specifically designed for drivers. It’s to notify them if they have an order to pick up. They will get a firebase notification which will tell them there’s an order up for grabs in their area. They can then accept the order which will be assigned to them and they will get the locations of where to pick up and where to drop off. The driver app will complete the order process and mark the order as delivered and completed. What about the drivers tip?
 
-Well the tip is sent from the customer app in the order but we’ll have to process that and when the driver has delivered we’ll assign that tip to their account for payout at the end of the month. For that we’ll need some specific functionality for **Tip processing**. Lets tally up everything mentioned above that has to be built.
+Well the tip is sent from the customer app in the order but we’ll have to process that and when the driver has delivered we’ll assign that tip to their account for payout at the end of the month. For that, we’ll need some specific functionality for **Tip processing**. Let's tally up everything mentioned above that has to be built.
 
 ### Backend to manage orders
 
@@ -50,11 +50,11 @@ This application will be used by restaurants or the sales representatives to upl
 
 ### Payment Processor
 
-This piece is separate because I think it's important to focus on directly and make sure it's rock solid.
+This piece is separate because I think it's important to focus on directly and make sure it's rock-solid.
 
 ### Tips Processor
 
-This part can be apart of the Payment processing but I think we'll keep it separate in terms of the code management incase we introduce certain functionalities around that.
+This part can be a part of the Payment processing, but I think we'll keep it separate in terms of the code management in case we introduce certain functionalities around that.
 
 ### User Manager
 
@@ -88,7 +88,7 @@ This processor is depended on by only the Order Management system. When orders a
 
 ### Customer App
 
-The customer app has no dependencies on it, but it depends heavily on multiple backend software to have been developed, or at leas stubbed out. It need to read all the product information (so we'll need products), it needs to be able to place an order (we'll need the order management) and it needs to be able to sign up a User (user management).
+The customer app has no dependencies on it, but it depends heavily on multiple backend software to have been developed, or at least stubbed out. It need to read all the product information (so we'll need products), it needs to be able to place an order (we'll need the order management) and it needs to be able to sign up a User (user management).
 
 ### Restaurant App
 
