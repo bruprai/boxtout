@@ -118,19 +118,19 @@ This phase will be concluded when we have a detailed plan of the technical setup
 
 ### Phase 1: Basic data storage structure and models involved
 
-In this phase we want to go over all the functionality we're looking at adding into the app. This will illuminate the models that we'll require to build all the services. We will identify key models and decides on which properties will be useful to have in the application.
+In this phase, we will review all the functionality we plan to add to the app. This will clairfy the models that we'll require to build all the services. We will identify key models and decide on which properties will be useful to have in the application.
 
 A success for this phase will be a detailed breakdown of the models we'll have in the application as well as the purpose they serve, their properties and in which parts of the system they will be used.
 
 ### Phase 2: Data population and development prep
 
-In this phase we are still not writing code haha. Planning and structure is important for such a large system, and we're still going to miss things. Here we will use the models defined above and generate some fake data for use to use when we finally do start the development. This process will give us a first review of our database structure we defined above and will show any flaws that we might have made in terms of how to store everything. This will also be very helpful during the development to ensure that we have data to work it.
+In this phase we are still not writing code haha. Planning and structure is important for such a large system, and we're still going to miss things. Here we will use the models defined above and generate some fake data for us to use when we finally do start the development. This process will give us a first review of our database structure we defined above and will show any flaws that we might have made in terms of how to store everything. This will also be very helpful during the development to ensure that we have data to work it.
 
 A success for this phase will be a database with enough information in it to allow us to display some basic product when we get to that point.
 
 ### Phase 3: Customer App Setup and Authentication
 
-Here we will create the mobile flutter project and setup firebase authentication. We will also make sure that when a user signs up we create them a profile on the database where we can manage all their information. This will be profile information for us to identify who we're communicating with.
+Here we will create the mobile flutter project and setup firebase authentication. We will also ensure that when a user signs up, we create a profile for them in the database where we can manage all their information. This will be the profile information for us to identify who we're communicating with.
 
 A success for this phase will be a flutter app where we can sign in. A folder with a firebase project for user management that contains the cloud function to create a new user model entry in firestore when the user is created. A firebase app setup to allow for authentication.
 
