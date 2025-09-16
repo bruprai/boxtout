@@ -8,7 +8,7 @@ What we’ll be building is a Product called BoxtOut - Pronounced Boxed Out. whi
 
 The reason I chose a Food delivery app is because:
 
-1. We just delivered a rebuild of the 2 out of 3 user facing applications for a client of ours that manages a food delivery product and service. This gave me insights into how we can rebuild a more efficient and cost effective one using some of the tools available to a single full stack dev like myself or a small team, like the one we have.
+1. We just delivered a rebuild of the 2 out of 3 user facing applications for a client of ours that manages a food delivery product and service. This gave me insights into how we can rebuild a more efficient and cost-effective one using some of the tools available to a single full stack dev like myself or a small team, like the one we have.
 
 2. It ensures that you actually see how important it is to understand higher level architectural planning to deliver a product, not just a single mobile app, a full product.
 
@@ -16,19 +16,19 @@ The reason I chose a Food delivery app is because:
 
 ## Products Overview
 
-Let's look at what we’ll require at minimum to build this product and have it be useful as a product. We’ll go through the process that I use to go through and quote for a new project when a client reaches out to me. We’ll work our way from the app through the entire system and then make a list of each of those items. We’ll start with the most important. Each of the descriptions will have a boldd word which indicates something else that needs to be built.
+Let's look at what we’ll require at minimum to build this product and have it be useful as a product. We’ll go through the process that I use to go through and quote for a new project when a client reaches out to me. We’ll work our way from the app through the entire system and then make a list of each of those items. We’ll start with the most important. Each of the descriptions will have a bold word which indicates something else that needs to be built.
 
 ### Customer Mobile Application
 
-This is the application that the customer will be using to order their food. To have a customer we need a way to manage all the users infomation. So we need a **User Manager**. In addition to that, if we want to order we need a **backend to manage orders**. We’ll build that using Firestore DB in the Firebase suite. But before the user can place any order they need to be able to choose a product. So the **backend should also store all the products**, we’ll use Firestore DB for that as well. But where do these products come from and who do they belong to? Well, we’ll need a **Restaurant manager** to allow restaurants to manage their own menu’s, opening times, locations and general information.
+This is the application that the customer will be using to order their food. To have a customer, we need a way to manage all the user's infomation. So we need a **User Manager**. In addition to that, if we want to order we need a **backend to manage orders**. We’ll build that using Firestore DB in the Firebase suite. But before the user can place any order they need to be able to choose a product. So the **backend should also store all the products**; we’ll use Firestore DB for that as well. But where do these products come from, and who do they belong to? Well, we’ll need a **Restaurant manager** to allow restaurants to manage their own menu’s, opening times, locations and general information.
 
 But before we can even capture that order we need to take payment. So we’ll need to build a **payment system** that can process credit card payments, attach receipts and make sure that there’s no faulty transactions on the orders.
 
-So now we have the information that will be shown in the app through the Restaurant manager, all that information is stored on the backend Firestore DB. When the user places an order on the Customer app it goes into our order management backend system which will be built using firebase functions and the order is placed. Now what?
+So now we have the information that will be shown in the app through the Restaurant manager; all that information is stored on the backend Firestore DB. When the user places an order on the Customer app it goes into our order management backend system which will be built using firebase functions and the order is placed. Now what?
 
 ### Restaurant Application
 
-This application goes into the Restaurant that’s signed up to our service so they can manage it from there. This application will be connected to our backend to manage orders for the specific restaurant. They will be able to select an order and indicate to us how long it’ll take to complete, then they’ll be able to mark it ready for when the driver can pick it up. So this application will be solely for the restaurant to give updates to the customer that ordered the meal. Did I just say driver? Well how will they know what’s happening. That’s where the **Driver app** comes in.
+This application goes to the restaurant that’s signed up for our service so they can manage it from there. This application will be connected to our backend to manage orders for the specific restaurant. They will be able to select an order and indicate to us how long it’ll take to complete, then they’ll be able to mark it ready for when the driver can pick it up. So this application will be solely for the restaurant to give updates to the customer that ordered the meal. Did I just say driver? Well how will they know what’s happening. That’s where the **Driver app** comes in.
 
 ### Driver Application
 
@@ -88,7 +88,7 @@ This processor is depended on by only the Order Management system. When orders a
 
 ### Customer App
 
-The customer app has no dependencies on it, but it depends heavily on multiple backend software to have been developed, or at leas stubbed out. It need to read all the product information (so we'll need products), it needs to be able to place an order (we'll need the order management) and it needs to be able to sign up a User (user management).
+The customer app has no dependencies on it, but it depends heavily on multiple backend software to have been developed, or at least stubbed out. It needs to read all the product information (so we'll need products), it needs to be able to place an order (we'll need the order management) and it needs to be able to sign up a User (user management).
 
 ### Restaurant App
 
